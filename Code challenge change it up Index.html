@@ -6,104 +6,39 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-        <!-- build:css css/main.css -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- endbuild -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    
+        <!-- Additional CSS must be placed after Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+        <link rel="stylesheet" href="css/styles.css" />
 
         <title>NuCamp: A Better Way To Camp</title>
     </head>
 <body>
- 
 
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2 align-self-center"> 
                     <img src="img/logo.png" class="image-fluid"/>
-                    
-            
-                </div> 
+            </div> 
                 <div class="col">
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
-                <div class="col-md-4 col-xl-2 mt-4" >
-                    <a role="button" class="btn btn-info btn-lg" data-toggle="modal"
-                    data-target="#reserveFormModal">  
-                      Reserve a campsite</a>
+                <div class="col-md-4 col-xl-2 mt-4">
+                    <a href="#Date"role="button" class="btn btn-info btn-sm" data-toggle="tooltip" 
+                    data-placement="bottom" data-html="true" title="Or call us at <br /><strong>201-222-4321</strong>">Reserve a campsite</a>
                 </div>
             </div> 
-        </div> 
-     
+        </div>   
     </header>
-    <div class="modal fade" id="reserveFormModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header bg-info text-white">
-              <h5 class="modal-title" id="exampleModalLabel">Reserve a campsite</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <form id="reserveForm">
-                    <div class="row form-group">
-                        <label class="col-sm-6 col-form-label" for="NuCampers">Number of campers</label>
-                        <div class="col" >
-                            <select class="form-control" id="NuCampers"> 
-                                <option value="select" >select</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <label class="col-sm-6 col-form-label" for="Date">Date</label>
-                        <div class="col" >
-                                
-                            <input type="date" id="Date" name="date" placeholder="mm-dd-yyyy" value="">
-                        </div>     
-                    </div> 
-                    <div class="row form-group">
-                        <label class="col-sm-6 col-form-label" for="Campsite">Campsite</label>
-                        
-                        <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-success active">
-                              <input type="radio" name="siteType" id="siteTent" value="tent" autocomplete="off" checked> Tent
-                            </label>
-                            <label class="btn btn-primary">
-                              <input type="radio" name="siteType" id="siteRV" value="rv" autocomplete="off"> RV
-                            </label>
-                        </div>  
-                           
-                          
-                        
-                    </div> 
-
-                    <div class="row">
-                        <div class="col">
-                            <button type="button" data-dismiss="modal" class="btn btn-secondary">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30"/></a>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="100" width="100"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -128,21 +63,21 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title">Login</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal">&times; </button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
                         <form>
                             <div class="form-row">
                                 <div class="form-group col-12">
-                                    <label class="sr-only" for="loginEmail">Email address</label>
+                                    <label class="sr-only" for="loginEmail">Email</label>
                                     <input type="email" class="form-control form-control-sm" 
                                     id="loginEmail" placeholer="Enter email">
                                 </div>
                                 <div class="form-group col-12">
                                     <label class="sr-only" for="loginPassword">Password</label>
                                     <input type="password" class="form-control form-control-sm"
-                                    id="loginPassword" placeholder="Password">
+                                    id="loginPassword" placeholder="Enter password">
                                 </div>
                                 <div class="col">
                                     <div class="form-check">
@@ -154,7 +89,7 @@
                             <div class="form-row">
                                 <button type="button" class="btn btn-secondary btn-sm ml-auto" 
                                 data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                                <button type="submit" class="btn btn-primary btn btn-sm ml-1">Sign in</button>
                             </div>
                         </form>
                     </div>
@@ -210,18 +145,12 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
-    <!-- Carousel play and pause buttons-->
-                    
-                    <buttton class="btn btn-danger btn-sm" id="carouselButton">
-                        <i class="fa fa-pause"></i>
-                    </buttton>
-                    
                 </div>
             </div>
         </div>
-            <div class="row row-content align-items-center">
+            <div class="row row-content float-left">
                 <div class="col-sm-4 order-sm-last col-md-3">
-                    <h2 class="text-sm-right">Discover & Review</h2>
+                    <h2 class="text-lg-left">Discover & Review</h2>
                 </div>
             <div class="col">
                 <div class="media">
@@ -268,11 +197,9 @@
                 </div>
             </div>
         </div>
-        <!-- Probably need to remove this. It's for the original reserve form.-->
         <div class="row row-content">
             <div class="mx-auto col-sm-6 order-sm-last">
            
-
             <div class="card">
                 <h3 class="card-header text-white bg-info">Reserve a campsite</h3>
                 <div class="card-body">
@@ -299,7 +226,6 @@
                         </div> 
                         <div class="row">
                             <div class="col">
-                               
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </div>
@@ -308,7 +234,6 @@
             </div>
         </div>
         </div>
-        <!-- Remove everything above.-->
     </div>
    
     <footer class="site-footer">
@@ -340,15 +265,15 @@
 </footer>
 
 <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-<!-- build:js js/main.js -->
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="js/scripts.js"></script>
-<!-- endbuild -->
-   
 
-
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 </body>
 </body>
 
